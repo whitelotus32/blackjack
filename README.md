@@ -1,1 +1,1 @@
-# Creating a Blackjack game
+# Blackjack game
