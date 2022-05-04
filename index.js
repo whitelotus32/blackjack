@@ -9,8 +9,10 @@ let sumEl = document.getElementById("sum-el")
 // querySelector is more dynamic method
 // asks for an element by its selector
 // let sumEl = document.querySelector("#sum-el")
+let cardsEl = document.getElementById("cards-el")
 
 function startGame() {
+    cardsEl.textContent = "Cards: " + firstCard + " " + secondCard
     // Renders the sum on the page
     sumEl.textContent = "Sum: " + sum
     if (sum <= 20) {
