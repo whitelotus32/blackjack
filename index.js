@@ -1,6 +1,7 @@
 let firstCard = 6
 let secondCard = 9
-let cards = [firstCard, secondCard] //ordered list of items
+// CreateD aN array - cards - that contains firstCard and secondCard
+let cards = [firstCard, secondCard]
 let sum = firstCard + secondCard
 let hasBlackJack = false
 let isAlive = true
@@ -38,10 +39,13 @@ function renderGame() {
 // Created a function newCard() that logs out "Drawing a new card from the deck!"
 function newCard() {
     console.log("Drawing a new card from the deck!")
-    // 1. Create a card variable, and hard code its value to a number (2-11)
+    // CreateD a card variable, and hard code its value to a number (2-11)
     let card = 5
-    // 2. Add the new card to the sum variable
+    // AddED the new card to the sum variable
     sum += card
-    // 3. Call startGame()
+    // Push the card to the cards array
+    cards.push(card)
+
+    // Called startGame()
     renderGame()
 }
