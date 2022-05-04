@@ -4,8 +4,15 @@ let sum = firstCard + secondCard
 let hasBlackJack = false
 let isAlive = true
 let message = ""
+let messageEl = document.getElementById("message-el")
+let sumEl = document.getElementById("sum-el")
+// querySelector is more dynamic method
+// asks for an element by its selector
+// let sumEl = document.querySelector("#sum-el")
 
 function startGame() {
+    // Renders the sum on the page
+    sumEl.textContent = "Sum: " + sum
     if (sum <= 20) {
         message = "Do you want to draw a new card?"
     } else if (sum === 21) {
@@ -15,4 +22,5 @@ function startGame() {
         message = "You're out of the game!"
         isAlive = false
     }
+    messageEl.textContent = message
 }
