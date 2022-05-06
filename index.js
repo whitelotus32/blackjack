@@ -56,14 +56,17 @@ function renderGame() {
 
 // Created a function newCard() that logs out "Drawing a new card from the deck!"
 function newCard() {
-    console.log("Drawing a new card from the deck!")
-    // Created a card variable, and hard code its value to a number (2-11)
-    let card = getRandomCard()
-    // Added the new card to the sum variable
-    sum += card
-    // Push the card to the cards array
-    cards.push(card)
+    // Only allow the player to get a new card if she IS alive and does NOT have Blackjack
+    if (isAlive === true && hasBlackJack === false) {
+        console.log("Drawing a new card from the deck!")
+        // Created a card variable, and hard code its value to a number (2-11)
+        let card = getRandomCard()
+        // Added the new card to the sum variable
+        sum += card
+        // Push the card to the cards array
+        cards.push(card)
 
-    // Called startGame()
-    renderGame()
+        // Called startGame()
+        renderGame()
+    }
 }
