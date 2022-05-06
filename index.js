@@ -1,6 +1,6 @@
 let firstCard = 6
 let secondCard = 9
-// CreateD aN array - cards - that contains firstCard and secondCard
+// Created an array - cards - that contains firstCard and secondCard
 let cards = [firstCard, secondCard]
 let sum = firstCard + secondCard
 let hasBlackJack = false
@@ -12,6 +12,18 @@ let sumEl = document.getElementById("sum-el")
 // asks for an element by its selector
 // let sumEl = document.querySelector("#sum-el")
 let cardsEl = document.getElementById("cards-el")
+
+// Created a function, getRandomCard(), that always returns the number 5
+function getRandomCard() {
+    let randomNumber = Math.floor( Math.random()*13 ) + 1
+    if (randomNumber > 10) {
+        return 10
+    } else if (randomNumber === 1) {
+        return 11
+    } else {
+        return randomNumber
+    }
+}
 
 // Created a new function called startGame() that calls renderGame()
 function startGame() {
@@ -43,9 +55,9 @@ function renderGame() {
 // Created a function newCard() that logs out "Drawing a new card from the deck!"
 function newCard() {
     console.log("Drawing a new card from the deck!")
-    // CreateD a card variable, and hard code its value to a number (2-11)
-    let card = 5
-    // AddED the new card to the sum variable
+    // Created a card variable, and hard code its value to a number (2-11)
+    let card = getRandomCard()
+    // Added the new card to the sum variable
     sum += card
     // Push the card to the cards array
     cards.push(card)
