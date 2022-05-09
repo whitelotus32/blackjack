@@ -1,3 +1,8 @@
+// Created the player object. Gave it two keys, name and chips, and set their values
+let player = {
+    name: "Nick",
+    chips: 200
+}
 let cards = []
 let sum = 0
 let hasBlackJack = false
@@ -9,6 +14,11 @@ let sumEl = document.getElementById("sum-el")
 // asks for an element by its selector
 // let sumEl = document.querySelector("#sum-el")
 let cardsEl = document.getElementById("cards-el")
+// Got ahold of the player-el paragraph and stored it in a variable called playerEl
+let playerEl = document.getElementById("player-el")
+
+// Rendered the player's name and chips in playerEl
+playerEl.textContent = player.name + ": $" + player.chips
 
 // Created a function, getRandomCard(), that always returns the number 5
 function getRandomCard() {
